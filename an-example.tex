@@ -1,0 +1,70 @@
+\documentclass[10pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\title{PhD Status Report}
+\date{2014-06-18}
+\author[Johannes Agricola]{Johannes Agricola}
+
+\usetheme{ugoe}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Test Slide}
+
+  \begin{itemize}
+    \item 
+      Some example text
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Test slide with a slightly longer frame title}
+
+  \begin{itemize}
+    \item 
+      Much more example text
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Some Blocks\ldots}
+  \begin{block}{Standard Blocks}
+    \textbackslash{}begin\{block\}\ldots
+  \end{block}
+  \begin{alertblock}{Alerted Blocks}
+    \textbackslash{}begin\{alertblock\}\ldots
+  \end{alertblock}
+  \begin{exampleblock}{Example Blocks}
+    \textbackslash{}begin\{exampleblock\}\ldots
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}
+    \item 
+      A completely titleless page
+  \end{itemize}
+\end{frame}
+
+\newcounter{finalframe}
+\setcounter{finalframe}{\value{framenumber}}
+\begin{frame}
+  \begin{center}
+    \Huge Thank you for your attention!
+  \end{center}
+\end{frame}
+
+\appendix
+\begin{frame}
+  \begin{center}
+    \Huge Backup
+  \end{center}
+\end{frame}
+
+\setcounter{framenumber}{\value{finalframe}}
+\end{document}

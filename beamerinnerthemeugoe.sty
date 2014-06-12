@@ -1,0 +1,33 @@
+\mode<presentation>
+
+% Title page
+\defbeamertemplate*{title page}{ugoe}[1][]
+{ 
+  \begin{tikzpicture}[remember picture, overlay]
+  %  \draw (current page.north west) -- (current page.south east);
+    \draw (current page.north east) ++(-0.125, -0.05) coordinate(logo ne);
+    \node at (logo ne) [anchor=north east] {
+      \includegraphics[width=5cm]{logo-uni-goe.pdf}
+    };
+%    \draw (current page.north east) node [anchor=north east] {
+%      \includegraphics[width=0.5\textwidth]{logo-uni-goe.pdf}
+%    };
+  \end{tikzpicture}
+
+  \vskip1.75cm%
+  \begin{beamercolorbox}[sep=8pt,center,#1]{title page header}
+    \usebeamerfont{title}\inserttitle\par%
+  \end{beamercolorbox}%
+  \vskip0.75cm%
+  \begin{beamercolorbox}[center,#1]{author}
+    \usebeamerfont{author}\insertauthor%
+  \end{beamercolorbox}
+  \vskip0.2cm%
+  \begin{beamercolorbox}[center,#1]{date}
+    \usebeamerfont{author}\insertdate%
+  \end{beamercolorbox}
+  \vfill
+}
+
+\mode
+<all>
