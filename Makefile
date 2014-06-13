@@ -1,8 +1,9 @@
+SRC = an-example
+
 INKSCAPE = $(addsuffix .pdf, $(basename $(wildcard images/*.svg)))
 DIA_FILES = $(addsuffix .pdf, $(basename $(wildcard images/*.dia)))
 GNUPLOT_FILES = $(addsuffix .tex, $(basename $(wildcard gnuplot/*.plot)))
 ROOT_FILES = $(addsuffix .pdf, $(basename $(wildcard root/*.C)))
-SRC = an-example
 TMP = tmp
 
 .PHONY: all
@@ -11,10 +12,11 @@ TMP = tmp
 .PHONY: first-time
 .PHONY: upload
 .PHONY: compress
+.PHONY: $(SRC).pdf
 
 all: $(SRC).pdf
 
-$(SRC).pdf: $(SRC).tex $(INKSCAPE) $(GNUPLOT_FILES) $(ROOT_FILES) *.sty
+$(SRC).pdf: $(SRC).tex $(INKSCAPE) $(GNUPLOT_FILES) $(ROOT_FILES)
 	#*/*.tex
 	test -e $(TMP) || make first-time
 #	test -e $(TMP)/$(SRC).lin || echo '\item' > $(TMP)/$(SRC).lin
