@@ -48,6 +48,14 @@
           And some subitems
       \end{itemize}
   \end{itemize}
+
+  \begin{alertblock}{Titlepage peculiarity}
+    Do not forget to build this template twice after you have altered
+    the title page. It uses tikz for alignment and the 
+    \texttt{remember picture} option which requires two runs.
+
+    If you forget to do that, parts of the title page may be shifted.
+  \end{alertblock}
 \end{frame}
 
 \begin{frame}
@@ -112,6 +120,100 @@
   \begin{align*}
     \int_{V} {\rm div}\vec F ~{\rm d}V = \oint_{S} \vec F \cdot \vec n ~\text dS
   \end{align*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Multiple columns?}
+  \framesubtitle{Two Columns}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item 
+          This is the right column to put stuff into
+        \item
+          They are both centered, as usual.
+        \item
+          You can also put images in one of the two columns if you prefer
+          that.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item 
+          This is the right column
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Multiple columns?}
+  \framesubtitle{Two columns and some stuff below}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item 
+          This is the right column to put stuff into
+        \item
+          They are both centered, as usual.
+        \item
+          You can also put images in one of the two columns if you prefer
+          that.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item 
+          This is the right column
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \begin{alertblock}{}
+    We can also add stuff after the two columns. Though, this does not look 
+    as nice as you would expect.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\LaTeX{} Makefile}
+  This template comes with convenient latex makefile. Some Features:
+  \begin{itemize}
+    \item 
+      Automatic SVG $\rightarrow$ PDF conversion
+      \begin{itemize}
+        \item 
+          For files in images/*.svg
+        \item
+          Requires inkscape
+        \item
+          Can be easily extended to other file types
+      \end{itemize}
+    \item
+      Automatic bibtexing
+    \item
+      Cleaning mechanism
+    \item
+      Keeps temporary files in tmp/
+  \end{itemize}
+  \begin{exampleblock}{Usage}
+    Just copy the Makefile to your \LaTeX{} working directory and change
+    the value of the SRC variable at its top to your top tex file. Then
+    just type make in a shell in that directory.
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\LaTeX{} Makefile}
+  \framesubtitle{vim Addendum}
+  If you are using vim and Makefiles you may consider adding this to your 
+  vimrc:
+  \begin{itemize}
+    \item 
+      map <C-M> :!make<CR>
+    \item
+      incidentally, C-M is also mapped to the return key. So every time
+      you will hit return and are not in edit mode, make will be called.
+  \end{itemize}
 \end{frame}
 
 \appendix
