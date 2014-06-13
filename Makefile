@@ -1,4 +1,4 @@
-SRC = an-example
+SRC = talk
 
 INKSCAPE = $(addsuffix .pdf, $(basename $(wildcard images/*.svg)))
 DIA_FILES = $(addsuffix .pdf, $(basename $(wildcard images/*.dia)))
