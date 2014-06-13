@@ -1,4 +1,6 @@
 \documentclass[10pt]{beamer}
+
+% In general, you should encode all files using UTF-8
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
@@ -9,6 +11,9 @@
 
 % Enable rounded corners for standard blocks:
 % \setbeamertemplate{blocks}[rounded]
+
+% Add some paragraph spacing:
+%\setlength{\parskip}{\smallskipamount} 
 
 \title{Example Template}
 \date{2014-06-18}
@@ -109,21 +114,25 @@
   \end{align*}
 \end{frame}
 
-\newcounter{finalframe}
-\setcounter{finalframe}{\value{framenumber}}
+\appendix
 \begin{frame}
-  \frametitle{\ }
+  \frametitle{~}
   \begin{center}
-    \Huge Thank you for your attention!
+    \textbf{\Large Thank you for your attention.}
   \end{center}
 \end{frame}
 
-\appendix
 \begin{frame}
   \begin{center}
     \Huge Backup
   \end{center}
 \end{frame}
 
-\setcounter{framenumber}{\value{finalframe}}
+\begin{frame}
+  \begin{alertblock}{Frame numbering}
+    Have you noticed that the total page count is not counting past the thank 
+    you page? This is automatically included in the ugoe theme!
+  \end{alertblock}
+\end{frame}
+
 \end{document}
