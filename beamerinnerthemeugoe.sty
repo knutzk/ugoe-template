@@ -10,18 +10,23 @@
     \draw (current page.south) ++(0,1) node [anchor=south] { \insertlogos };
   \end{tikzpicture}
 
-  \vskip1cm%
+  \vskip0.6cm%
   \begin{beamercolorbox}[sep=8pt,center,#1]{title page header}
     \usebeamerfont{title}\inserttitle\par%
   \end{beamercolorbox}%
-  \vskip0.75cm%
+  \vskip0.6cm%
   \begin{beamercolorbox}[center,#1]{author}
     \usebeamerfont{author}\insertauthor%
+  \end{beamercolorbox}
+  \vskip0.2cm%
+  \begin{beamercolorbox}[center,#1]{institute}
+    \usebeamerfont{author}\insertinstitute%
   \end{beamercolorbox}
   \vskip0.2cm%
   \begin{beamercolorbox}[center,#1]{date}
     \usebeamerfont{author}\insertdate%
   \end{beamercolorbox}
+ \vskip0.3cm%
   \vfill
 }
 
