@@ -57,4 +57,13 @@
 
 \AtEndDocument{\pageatend}
 
+\def\ugoeAddLogo{
+  \begin{tikzpicture}[remember picture, overlay]
+    \draw (current page.north east) ++(-0.170, -0.01) coordinate(logo ne);
+    \node at (logo ne) [anchor=north east] {
+      \includegraphics[width=5cm]{logos/logo-uni-goe.pdf}
+    };
+  \end{tikzpicture}
+}
+
 \mode<all>
