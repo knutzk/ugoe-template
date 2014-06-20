@@ -14,10 +14,10 @@
       \draw (current page.north west) ++( 0.25, -1.2) coordinate(line w);
       \draw [line width=0.2mm] (line e) -- (line w);
       \ifx\insertframesubtitle\empty
-        \draw (nn) ++ (0.25,0.6) node [anchor=west, text width=6.6cm] {\insertframetitle};
+        \draw (nn) ++ (0.25cm, 0.6cm) node [anchor=west, text width=6.6cm] {\insertframetitle};
       \else
-        \draw (nn) ++ (0.25,0.9) node [anchor=base west, text width=6.6cm] {\insertframetitle};
-        \draw (nn) ++ (0.25,0.35) node [anchor=base west, text width=6.6cm] {\usebeamerfont{framesubtitle}\insertframesubtitle};
+        \draw (nn) ++ (0.25cm, 0.6cm) node [anchor=base west, text width=6.6cm] {\insertframetitle};
+        \draw (nn) ++ (0.25cm, 0.15cm) node [anchor=base west, text width=6.6cm] {\usebeamerfont{framesubtitle}\insertframesubtitle};
       \fi
     \end{tikzpicture}
   \end{beamercolorbox}
