@@ -9,6 +9,12 @@
 % Set the math mode font to sans-serif
 \let\mathrm\mathsf
 
+% If you are not using SLC5/6 (or for any other reason pdfTeX before 1.40.6)
+% you may comment this line. This just fixes transparent images with
+% pdfs when viewed with acrobat reader and compiled with old versions of
+% pdfTeX.
+\pdfpageattr {/Group << /S /Transparency /I true /CS /DeviceRGB>>}
+
 % Use this for better font scaling (esp. if you want to use \tiny)
 \usepackage{lmodern}
 \usepackage{exscale}
