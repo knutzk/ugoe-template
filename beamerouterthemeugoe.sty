@@ -4,18 +4,20 @@
 {
   \begin{beamercolorbox}[wd=\paperwidth]{frametitle}
     \begin{tikzpicture}
-      \useasboundingbox[fill=white](0,0) rectangle(\the\paperwidth,1.2);
+      \useasboundingbox(current page.north west) ++ (0, -1.2) coordinate (nn) rectangle (current page.north east);
 
-      \draw (\the\paperwidth, 1.2) ++(-0.1, 0.1) coordinate(logo ne);
+      \draw (current page.north east) ++(-0.1, 0.1) coordinate(logo ne);
       \node at (logo ne) [anchor=north east] {
           \includegraphics[width=5cm]{logos/logo-uni-goe.pdf}
         };
-      \draw [line width=0.2mm] (\the\paperwidth, 0.0) ++ (-0.25, 0) -- (0.25,0);
+      \draw (current page.north east) ++(-0.25, -1.2) coordinate(line e);
+      \draw (current page.north west) ++( 0.25, -1.2) coordinate(line w);
+      \draw [line width=0.2mm] (line e) -- (line w);
       \ifx\insertframesubtitle\empty
-        \node at (0.25,0.6) [anchor=west, text width=6.6cm] {\insertframetitle};
+        \draw (nn) ++ (0.25,0.6) node [anchor=west, text width=6.6cm] {\insertframetitle};
       \else
-        \node at (0.25,0.6) [anchor=base west, text width=6.6cm] {\insertframetitle};
-        \node at (0.25,0.1) [anchor=base west, text width=6.6cm] {\usebeamerfont{framesubtitle}\insertframesubtitle};
+        \draw (nn) ++ (0.25,0.9) node [anchor=base west, text width=6.6cm] {\insertframetitle};
+        \draw (nn) ++ (0.25,0.35) node [anchor=base west, text width=6.6cm] {\usebeamerfont{framesubtitle}\insertframesubtitle};
       \fi
     \end{tikzpicture}
   \end{beamercolorbox}
