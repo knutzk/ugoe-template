@@ -66,25 +66,6 @@
   \end{tikzpicture}
 }
 
-\def\ugoeAddShortLogo{
-  \begin{tikzpicture}[remember picture, overlay]
-    \draw (current page.north east) ++(-0.170, -0.01) coordinate(logo ne);
-    \node at (logo ne) [anchor=north east] {
-      \includegraphics[width=1cm]{logos/logo-uni-goe-notext.pdf}
-    };
-  \end{tikzpicture}
-}
-
-
-\def\ugoeAddSmallLogo{
-  \begin{tikzpicture}[remember picture, overlay]
-    \draw (current page.north east) ++(-0.170, -0.01) coordinate(logo ne);
-    \node at (logo ne) [anchor=north east] {
-      \includegraphics[width=0.33cm]{logos/logo-uni-goe-notext.pdf}
-    };
-  \end{tikzpicture}
-}
-
 \def\ugoeAddHugeLogo#1{
   \begin{tikzpicture}[remember picture, overlay]
     \draw (current page.center) ++(0.0, 0.0) coordinate(logo ne);
