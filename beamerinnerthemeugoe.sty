@@ -1,5 +1,8 @@
 \mode<presentation>
 
+\let\insertsupervisor\relax
+\newcommand{\supervisor}[1]{\def\insertsupervisor{#1}}
+
 \defbeamertemplate*{title page}{ugoe}[1][]
 { 
   \begin{tikzpicture}[remember picture, overlay]
@@ -17,6 +20,10 @@
   \vskip0.6cm%
   \begin{beamercolorbox}[center,#1]{author}
     \usebeamerfont{author}\insertauthor%
+  \end{beamercolorbox}
+  \vskip0.2cm%
+  \begin{beamercolorbox}[center,#1]{supervisor}
+    \usebeamerfont{author}Supervised by~\insertsupervisor%
   \end{beamercolorbox}
   \vskip0.2cm%
   \begin{beamercolorbox}[center,#1]{institute}
