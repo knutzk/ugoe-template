@@ -2,6 +2,8 @@
 
 \let\insertsupervisor\relax
 \newcommand{\supervisor}[1]{\def\insertsupervisor{#1}}
+\let\insertconference\relax
+\newcommand{\conference}[1]{\def\insertconference{#1}}
 
 \defbeamertemplate*{title page}{ugoe}[1][]
 { 
@@ -10,30 +12,33 @@
     \node at (logo ne) [anchor=north east] {
       \includegraphics[width=5cm]{logos/logo-uni-goe.pdf}
     };
-    \draw (current page.south) ++(0,1) node [anchor=south] { \insertlogos };
+    \draw (current page.south) ++(0,0.4) node [anchor=south] { \insertlogos };
   \end{tikzpicture}
 
   \vskip0.6cm%
   \begin{beamercolorbox}[sep=8pt,center,#1]{title page header}
     \usebeamerfont{title}\inserttitle\par%
   \end{beamercolorbox}%
-  \vskip0.6cm%
+  \vskip0.15cm%
   \begin{beamercolorbox}[center,#1]{author}
     \usebeamerfont{author}\insertauthor%
   \end{beamercolorbox}
-  \vskip0.2cm%
-  \begin{beamercolorbox}[center,#1]{supervisor}
-    \usebeamerfont{author}Supervised by~\insertsupervisor%
-  \end{beamercolorbox}
-  \vskip0.2cm%
+  \vskip0.15cm%
   \begin{beamercolorbox}[center,#1]{institute}
     \usebeamerfont{author}\insertinstitute%
   \end{beamercolorbox}
-  \vskip0.2cm%
+  \vskip0.15cm%
+  \begin{beamercolorbox}[center,#1]{supervisor}
+    \usebeamerfont{author}Supervised by~\insertsupervisor%
+  \end{beamercolorbox}
+  \vskip0.4cm%
   \begin{beamercolorbox}[center,#1]{date}
     \usebeamerfont{author}\insertdate%
   \end{beamercolorbox}
- \vskip0.3cm%
+  \vskip0.15cm%
+  \begin{beamercolorbox}[center,#1]{conference}
+    \usebeamerfont{author}\insertconference%
+  \end{beamercolorbox}
   \vfill
 }
 
