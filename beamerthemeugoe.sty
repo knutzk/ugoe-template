@@ -66,18 +66,6 @@
   \end{tikzpicture}
 }
 
-\def\ugoeAddHugeLogo#1{
-  \begin{tikzpicture}[remember picture, overlay]
-    \draw (current page.center) ++(0.0, 0.0) coordinate(logo ne);
-    \node (logo) at (logo ne) [anchor=center] {
-      \includegraphics[height=0.8\paperheight]{logos/logo-uni-goe-notext.pdf}
-    };
-    \begin{scope}[opacity=#1]
-      \draw [fill=white, draw=none](logo.north west) rectangle (logo.south east);
-    \end{scope}
-  \end{tikzpicture}
-}
-
 
 
 \mode<all>
